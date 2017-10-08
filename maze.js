@@ -9,6 +9,7 @@ function turnRed(obj, boundaries){
         //loops over each boundary and colors it red
         for(let boundary of boundaries['boundaries']){
             if (boundary !== obj){
+                //alert{"You lose!");
                 boundary.classList.add("youlose");
             }
         }
@@ -61,6 +62,7 @@ function main() {
         endTag.style.cursor = "default";
         //outputs that the user has won only if the boundaries aren't red and that the game has started
         if (!boundaries['isRed'] && boundaries['isStart']){
+            //aler("You win!");
             document.getElementById("status").innerHTML = "You win";
             boundaries['isStart'] = false;
         }
