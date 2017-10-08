@@ -12,9 +12,9 @@ function turnRed(obj, boundaries){
                 boundary.classList.add("youlose");
             }
         }
-
+        //alert("You lose!");
         //sets the status to lost and informs that all boundaries are red
-        document.getElementById("status").innerHTML = "You lose";
+        document.getElementById("status").innerHTML = "You lose!";
         boundaries['isRed'] = true;
     }
 
@@ -61,7 +61,8 @@ function main() {
         endTag.style.cursor = "default";
         //outputs that the user has won only if the boundaries aren't red and that the game has started
         if (!boundaries['isRed'] && boundaries['isStart']){
-            document.getElementById("status").innerHTML = "You win";
+            //alert("You win!");
+            document.getElementById("status").innerHTML = "You win!";
             boundaries['isStart'] = false;
         }
     });
